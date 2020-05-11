@@ -2,8 +2,8 @@ from PIL import Image
 
 TRANSPARENCY = 100       # percentage
 
-image = Image.open('/Users/valmik/PycharmProjects/vigilfuoco/multimedia/photos/DSC00100.JPG')
-watermark = Image.open('/Users/valmik/PycharmProjects/vigilfuoco/multimedia/watermarks/IMG_4156.PNG')
+image = Image.open('/Users/valmik/PycharmProjects/vvf_online/media/ajaximage/miki_2.jpg')
+watermark = Image.open('/Users/valmik/PycharmProjects/vvf_online/media/watermarks/IMG_4156.PNG')
 mask = watermark.convert('L').point(lambda x: min(x, 25))
 watermark.putalpha(mask)
 
